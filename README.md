@@ -1,9 +1,9 @@
-# Natural language processing course 2022/23: `Put name of your project here`
+# Natural language processing course 2022/23: `Literacy situation models knowledge base creation`
 
 Team members:
- * `MEMBER FULL NAME`, `STUDENT ID`, `STUDENT E-MAIL`
- * `MEMBER FULL NAME`, `STUDENT ID`, `STUDENT E-MAIL`
- * `MEMBER FULL NAME`, `STUDENT ID`, `STUDENT E-MAIL`
+ * `Nace Gorenc`, `STUDENT ID`, `STUDENT E-MAIL`
+ * `Jernej Vrhunc`, `STUDENT ID`, `STUDENT E-MAIL`
+ * `Žan Pečovnik`, `63160406`, `zp8358@student.uni-lj.si`
  
-Group public acronym/name: `THINK OF PUBLIC STRING FOR YOUR GROUP`
+Group public acronym/name: `skupina123`
  > This value will be used for publishing marks/scores. It will be known only to you and not you colleagues.
