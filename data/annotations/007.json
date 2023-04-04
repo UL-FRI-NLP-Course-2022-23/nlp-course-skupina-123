@@ -1,0 +1,40 @@
+{
+    "characters": ["Vanka Zhukov", "Alyahin", "Konstantin Makaritch", "Eel", "Olga Ignatyevna"],
+    "sentiments": {
+        "Vanka Zhukov":  {
+            "Vanka Zhukov": 0,
+            "Alyahin": 1,
+            "Konstantin Makaritch": 1,
+            "Eel": 1, 
+            "Olga Ignatyevna": 1
+        },
+        "Alyahin": {
+            "Vanka Zhukov": 1,
+            "Alyahin": 0,
+            "Konstantin Makaritch": 0,
+            "Eel": 0,
+            "Olga Ignatyevna": 0
+        },
+        "Konstantin Makaritch": {
+            "Vanka Zhukov": 1,
+            "Alyahin": 0,
+            "Konstantin Makaritch": 0,
+            "Eel": 1,
+            "Olga Ignatyevna": 1
+        },
+        "Eel": {
+            "Vanka Zhukov": 1,
+            "Alyahin": 0,
+            "Konstantin Makaritch": 1,
+            "Eel": 0,
+            "Olga Ignatyevna": 1
+        },
+        "Olga Ignatyevna": {
+            "Vanka Zhukov": 1,
+            "Alyahin": 0,
+            "Konstantin Makaritch": 1,
+            "Eel": 1,
+            "Olga Ignatyevna": 0
+        }
+    }
+}

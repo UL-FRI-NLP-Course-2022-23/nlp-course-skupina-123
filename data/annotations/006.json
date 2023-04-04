@@ -1,0 +1,29 @@
+{
+    "characters": ["Jo", "Hetty Parlow", "Piute Indians", "Mrs. Darnell"],
+    "sentiments": {
+        "Jo":  {
+            "Jo": 0,
+            "Hetty Parlow": 1,
+            "Piute Indians": -1,
+            "Mrs. Darnell": 0
+        },
+        "Hetty Parlow": {
+            "Jo": 1,
+            "Hetty Parlow": 0,
+            "Piute Indians": 0,
+            "Mrs. Darnell": 0
+        },
+        "Piute Indians": {
+            "Jo": -1,
+            "Hetty Parlow": 0,
+            "Piute Indians": 0,
+            "Mrs. Darnell": 0
+        },
+        "Mrs. Darnell": {
+            "Jo": 0,
+            "Hetty Parlow": 0,
+            "Piute Indians": 0,
+            "Mrs. Darnell": 0
+        }
+    }
+}
