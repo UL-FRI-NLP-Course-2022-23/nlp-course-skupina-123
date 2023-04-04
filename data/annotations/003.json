@@ -1,0 +1,34 @@
+{
+    "characters": [
+        "misha",
+        "porfiry",
+        "luise",
+        "nafanail"
+    ],
+    "sentiments": {
+        "misha": {
+            "misha": 0,
+            "porfiry": -1,
+            "luise": 0,
+            "nafanail": 0
+        },
+        "porfiry": {
+            "misha": 1,
+            "porfiry": 0,
+            "luise": 1,
+            "nafanail": 1
+        },
+        "luise": {
+            "misha": 1,
+            "porfiry": 0,
+            "luise": 0,
+            "nafanail": 0
+        },
+        "nafanail": {
+            "misha": 1,
+            "porfiry": 0,
+            "luise": 0,
+            "nafanail": -1
+        }
+    }
+}

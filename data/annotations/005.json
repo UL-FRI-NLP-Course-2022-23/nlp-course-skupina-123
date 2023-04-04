@@ -1,0 +1,34 @@
+{
+    "characters": [
+        "fairchild",
+        "easton",
+        "man",
+        "two passengers"
+    ],
+    "sentiments": {
+        "fairchild": {
+            "fairchild": 0,
+            "easton": 1,
+            "man": 0,
+            "two passengers": 0
+        },
+        "easton": {
+            "fairchild": 1,
+            "easton": 0,
+            "man": 0,
+            "two passengers": 0
+        },
+        "man": {
+            "fairchild": 0,
+            "easton": 0,
+            "man": 0,
+            "two passengers": 0
+        },
+        "two ppassengers": {
+            "fairchild": 0,
+            "easton": 0,
+            "man": 0,
+            "two passengers": 0
+        }
+    }
+}

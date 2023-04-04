@@ -1,0 +1,34 @@
+{
+    "characters": [
+        "peplov",
+        "kleopatra",
+        "natashenka",
+        "shchupkin"
+    ],
+    "sentiments": {
+        "peplov": {
+            "peplov": 0,
+            "kleopatra": -1,
+            "natashenka": 1,
+            "shchupkin": 1
+        },
+        "kleopatra": {
+            "peplov": 0,
+            "kleopatra": 0,
+            "natashenka": 1,
+            "shchupkin": 1
+        },
+        "natashenka": {
+            "peplov": 0,
+            "kleopatra": 0,
+            "natashenka": 0,
+            "shchupkin": 1
+        },
+        "shchupkin": {
+            "peplov": -1,
+            "kleopatra": -1,
+            "natashenka": 1,
+            "shchupkin": 0
+        }
+    }
+}
