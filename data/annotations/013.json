@@ -1,0 +1,16 @@
+{
+    "characters": [
+        "oak tree",
+        "ephemera"
+    ],
+    "sentiments": {
+        "oak tree": {
+            "oak tree": 0,
+            "ephemera": 1
+        },
+        "ephemera": {
+            "oak tree": 1,
+            "ephemera": 0
+        }
+    }
+}

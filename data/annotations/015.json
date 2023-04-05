@@ -1,0 +1,24 @@
+{
+    "characters": [
+        "framton nuttel",
+        "niece",
+        "mrs sappleton"
+    ],
+    "sentiments": {
+        "framton nuttel": {
+            "framton nuttel": 0,
+            "niece": 1,
+            "mrs sappleton": 1
+        },
+        "niece": {
+            "framton nuttel": 1,
+            "niece": 0,
+            "mrs sappleton": 1
+        },
+        "mrs sappleton": {
+            "framton nuttel": 1,
+            "niece": 1,
+            "mrs sappleton": 0
+        }
+    }
+}

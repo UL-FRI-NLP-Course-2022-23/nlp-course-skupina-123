@@ -1,0 +1,16 @@
+{
+    "characters": [
+        "hermann the irascible",
+        "prime minister"
+    ],
+    "sentiments": {
+        "hermann the irascible": {
+            "hermann the irascible": 0,
+            "prime minister": 1
+        },
+        "prime minister": {
+            "hermann the irascible": 1,
+            "prime minister": 0
+        }
+    }
+}

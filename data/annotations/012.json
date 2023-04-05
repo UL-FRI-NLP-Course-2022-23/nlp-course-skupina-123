@@ -1,0 +1,46 @@
+{
+    "characters": [
+        "hughie erskine",
+        "laura merton",
+        "colonel",
+        "alan trevor",
+        "baron hausberg"
+    ],
+    "sentiments": {
+        "hughie erskine": {
+            "hughie erskine": 0,
+            "laura merton": 1,
+            "colonel": 1,
+            "alan trevor": 1,
+            "baron hausberg": 1
+        },
+        "laura merton": {
+            "hughie erskine": 1,
+            "laura merton": 0,
+            "colonel": 0,
+            "alan trevor": 0,
+            "baron hausberg": 0
+        },
+        "colonel": {
+            "hughie erskine": 1,
+            "laura merton": 0,
+            "colonel": 0,
+            "alan trevor": 0,
+            "baron hausberg": 0
+        },
+        "alan trevor": {
+            "hughie erskine": 1,
+            "laura merton": 0,
+            "colonel": 0,
+            "alan trevor": 0,
+            "baron hausberg": 1
+        },
+        "baron hausberg": {
+            "hughie erskine": 1,
+            "laura merton": 0,
+            "colonel": 0,
+            "alan trevor": 1,
+            "baron hausberg": 1
+        }
+    }
+}
