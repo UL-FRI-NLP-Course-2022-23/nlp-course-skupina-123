@@ -1,0 +1,34 @@
+{
+    "characters": [
+        "masie",
+        "irving carter",
+        "small eyes",
+        "lulu"
+    ],
+    "sentiments": {
+        "masie": {
+            "masie": 0,
+            "irving carter": 1,
+            "small eyes": 1,
+            "lulu": 1
+        },
+        "irving carter": {
+            "masie": 1,
+            "irving carter": 0,
+            "small eyes": 0,
+            "lulu": 0
+        },
+        "small eyes": {
+            "masie": 1,
+            "irving carter": 0,
+            "small eyes": 0,
+            "lulu": 0
+        },
+        "lulu": {
+            "masie": 1,
+            "irving carter": 0,
+            "small eyes": 0,
+            "lulu": 0
+        }
+    }
+}

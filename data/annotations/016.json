@@ -1,0 +1,16 @@
+{
+    "characters": [
+        "aunt rachel",
+        "misto c"
+    ],
+    "sentiments": {
+        "aunt rachel": {
+            "aunt rachel": 0,
+            "misto c": 1
+        },
+        "misto c": {
+            "aunt rachel": 1,
+            "misto c": 0
+        }
+    }
+}
