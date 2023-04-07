@@ -1,0 +1,34 @@
+{
+    "characters": [
+        "otchumyelov",
+        "hryukin",
+        "yeldyrin",
+        "prohor"
+    ],
+    "sentiments": {
+        "otchumyelov": {
+            "otchumyelov": 0,
+            "hryukin": 1,
+            "yeldyrin": 1,
+            "prohor": 1
+        },
+        "hryukin": {
+            "otchumyelov": 1,
+            "hryukin": 0,
+            "yeldyrin": 0,
+            "prohor": 0
+        },
+        "yeldyrin": {
+            "otchumyelov": 1,
+            "hryukin": 0,
+            "yeldyrin": 0,
+            "prohor": 0
+        },
+        "prohor": {
+            "otchumyelov": 1,
+            "hryukin": 0,
+            "yeldyrin": 0,
+            "prohor": 0
+        }
+    }
+}
