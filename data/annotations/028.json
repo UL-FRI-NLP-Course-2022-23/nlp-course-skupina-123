@@ -1,0 +1,24 @@
+{
+    "characters": [
+        "boy",
+        "girl",
+        "doctor"
+    ],
+    "sentiments": {
+        "boy": {
+            "boy": 0,
+            "girl": 1,
+            "doctor": 0
+        },
+        "girl": {
+            "boy": 1,
+            "girl": 0,
+            "doctor": 1
+        },
+        "doctor": {
+            "boy": 0,
+            "girl": 1,
+            "doctor": 0
+        }
+    }
+}

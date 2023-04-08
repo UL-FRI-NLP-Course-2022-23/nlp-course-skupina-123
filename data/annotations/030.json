@@ -1,0 +1,60 @@
+{
+    "characters": [
+        "little red riding hood",
+        "grandmother",
+        "mother",
+        "wolf",
+        "huntsman",
+        "another wolf"
+    ],
+    "sentiments": {
+        "little red riding hood": {
+            "little red riding hood": 0,
+            "grandmother": 1,
+            "mother": 0,
+            "wolf": -1,
+            "huntsman": 1,
+            "another wolf": -1
+        },
+        "grandmother": {
+            "little red riding hood": 1,
+            "grandmother": 0,
+            "mother": 0,
+            "wolf": -1,
+            "huntsman": 1,
+            "another wolf": -1
+        },
+        "mother": {
+            "little red riding hood": 0,
+            "grandmother": 0,
+            "mother": 0,
+            "wolf": 0,
+            "huntsman": 0,
+            "another wolf": 0
+        },
+        "huntsman": {
+            "little red riding hood": 1,
+            "grandmother": 1,
+            "mother": 0,
+            "wolf": -1,
+            "huntsman": 0,
+            "another wolf": -1
+        },
+        "wolf": {
+            "little red riding hood": -1,
+            "grandmother": -1,
+            "mother": 0,
+            "wolf": 0,
+            "huntsman": 0,
+            "another wolf": 0
+        },
+        "another wolf": {
+            "little red riding hood": -1,
+            "grandmother": -1,
+            "mother": 0,
+            "wolf": 0,
+            "huntsman": 0,
+            "another wolf": 0
+        }
+    }
+}

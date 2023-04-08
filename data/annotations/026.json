@@ -1,0 +1,60 @@
+{
+    "characters": [
+        "elephant",
+        "monkey",
+        "rabbit",
+        "frog",
+        "bear",
+        "tiger"
+    ],
+    "sentiments": {
+        "elephant": {
+            "elephant": 0,
+            "monkey": 1,
+            "rabbit": 1,
+            "frog": 1,
+            "bear": 1,
+            "tiger": -1
+        },
+        "monkey": {
+            "elephant": -1,
+            "monkey": 0,
+            "rabbit": 0,
+            "frog": 0,
+            "bear": 0,
+            "tiger": -1
+        },
+        "rabbit": {
+            "elephant": -1,
+            "monkey": 0,
+            "rabbit": 0,
+            "frog": 0,
+            "bear": 0,
+            "tiger": -1
+        },
+        "frog": {
+            "elephant": -1,
+            "monkey": 0,
+            "rabbit": 0,
+            "frog": 0,
+            "bear": 0,
+            "tiger": -1
+        },
+        "bear": {
+            "elephant": -1,
+            "monkey": 0,
+            "rabbit": 0,
+            "frog": 0,
+            "bear": 0,
+            "tiger": 0
+        },
+        "tiger": {
+            "elephant": -1,
+            "monkey": -1,
+            "rabbit": -1,
+            "frog": -1,
+            "bear": 0,
+            "tiger": 0
+        }
+    }
+}
