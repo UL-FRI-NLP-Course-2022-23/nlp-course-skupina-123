@@ -1,0 +1,14 @@
+{
+    "characters": [
+        "lion",
+		"mouse"
+    ],
+    "sentiments": {
+		"lion": {
+			"mouse": 1,
+		},
+		"mouse": {
+			"lion": 1,
+		}
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "characters": [
+        "roger",
+		"mrs. luella bates washingtion jones"
+    ],
+    "sentiments": {
+        "roger": {
+            "mrs. luella bates washingtion jones": 1
+        },
+		"mrs. luella bates washingtion jones": {
+			"roger": 1
+		}
+    }
+}

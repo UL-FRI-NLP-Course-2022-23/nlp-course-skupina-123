@@ -1,0 +1,15 @@
+{
+    "characters": [
+        "yegor vlassitch",
+		"pelegea"
+		
+    ],
+    "sentiments": {
+        "yegor vlassitch": {
+			"pelegea": -1
+		},
+		"pelegea": {
+			"yegor vlassitch": 1
+		}
+    }
+}

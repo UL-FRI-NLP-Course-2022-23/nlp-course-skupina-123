@@ -1,0 +1,14 @@
+{
+    "characters": [
+		"harvey maxwell",
+		"miss leslie"
+    ],
+    "sentiments": {
+		"harvey maxwell": {
+			"miss leslie": 1
+		},
+		"miss leslie": {
+			"harvey maxwell": 1,
+		}
+    }
+}
