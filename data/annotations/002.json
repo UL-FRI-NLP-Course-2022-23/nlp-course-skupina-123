@@ -1,32 +1,32 @@
 {
     "characters": [
-        "peplov",
-        "kleopatra",
+        "ilya sergeitch peplov",
+        "kleopatra petrovna",
         "natashenka",
         "shchupkin"
     ],
     "sentiments": {
-        "peplov": {
-            "peplov": 0,
-            "kleopatra": -1,
+        "ilya sergeitch peplov": {
+            "ilya sergeitch peplov": 0,
+            "kleopatra petrovna": -1,
             "natashenka": 1,
             "shchupkin": 1
         },
-        "kleopatra": {
-            "peplov": 0,
-            "kleopatra": 0,
+        "kleopatra petrovna": {
+            "ilya sergeitch peplov": 0,
+            "kleopatra petrovna": 0,
             "natashenka": 1,
             "shchupkin": 1
         },
         "natashenka": {
-            "peplov": 0,
-            "kleopatra": 0,
+            "ilya sergeitch peplov": 0,
+            "kleopatra petrovna": 0,
             "natashenka": 0,
             "shchupkin": 1
         },
         "shchupkin": {
-            "peplov": -1,
-            "kleopatra": -1,
+            "ilya sergeitch peplov": -1,
+            "kleopatra petrovna": -1,
             "natashenka": 1,
             "shchupkin": 0
         }

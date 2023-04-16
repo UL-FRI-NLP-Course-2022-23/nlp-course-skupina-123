@@ -1,22 +1,22 @@
 {
     "characters": [
-        "tchervyakov",
+        "ivan dmitritch tchervyakov",
         "brizzhalov",
         "wife"
     ],
     "sentiments": {
-        "tchervyakov": {
-            "tchervyakov": 0,
+        "ivan dmitritch tchervyakov": {
+            "ivan dmitritch tchervyakov": 0,
             "brizzhalov": 1,
             "wife": 0
         },
         "brizzhalov": {
-            "tchervyakov": -1,
+            "ivan dmitritch tchervyakov": -1,
             "brizzhalov": 0,
             "wife": 0
         },
         "wife": {
-            "tchervyakov": 0,
+            "ivan dmitritch tchervyakov": 0,
             "brizzhalov": 0,
             "wife": 0
         }
