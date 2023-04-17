@@ -1,0 +1,54 @@
+{
+    "characters": [
+        "cinderella",
+		"mother-in-law"
+		"the eldest",
+		"the youngest",
+		"godmother",
+		"king's son"
+    ],
+    "sentiments": {
+		"cinderella": {
+			"mother-in-law": -1,
+			"the eldest": -1,
+			"the youngest": -1,
+			"godmother": 1,
+			"king's son": 1
+		},
+		"mother-in-law": {
+			"cinderella": -1,
+			"the eldest": 1,
+			"the youngest": 1,
+			"godmother": 0,
+			"king's son": 0
+		},
+		"the eldest": {
+			"mother-in-law": 1,
+			"cinderella": -1,
+			"the youngest": 1,
+			"godmother": 0,
+			"king's son": 1
+		},
+		"the youngest": {
+			"mother-in-law": 1,
+			"the eldest": 1,
+			"cinderella": -1,
+			"godmother": 0,
+			"king's son": 1
+		},
+		"godmother": {
+			"mother-in-law": 0,
+			"the eldest": 0,
+			"the youngest": 0,
+			"cinderella": 1,
+			"king's son": 0
+		},
+		"king's son": {
+			"mother-in-law": 0,
+			"the eldest": 0,
+			"the youngest": 0,
+			"godmother": 0,
+			"cinderella": 1
+		},
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "characters": [
+        "oldest brother",
+        "younger brother",
+        "magical tree"
+    ],
+    "sentiments": {
+        "oldest brother": {
+            "oldest brother": 1,
+            "younger brother": -1,
+            "magical tree": -1
+        },
+        "younger brother": {
+            "oldest brother": 1,
+            "younger brother": 0,
+            "magical tree": 0
+        },
+        "magical tree": {
+            "oldest brother": 1,
+            "younger brother": 0,
+            "magical tree": 0
+        }
+    }
+}

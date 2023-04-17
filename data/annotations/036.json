@@ -1,0 +1,14 @@
+{
+    "characters": [
+        "boy",
+		"mother"
+    ],
+    "sentiments": {
+        "boy": {
+			"mother": 0
+		},
+		"mother": {
+			"boy": 1
+		}
+    }
+}

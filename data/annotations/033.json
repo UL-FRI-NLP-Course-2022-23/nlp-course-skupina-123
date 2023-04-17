@@ -1,0 +1,63 @@
+{
+    "characters": [
+        "john",
+		"kate",
+		"maggie",
+		"chief",
+		"farmer jones",
+		"mrs. ellis",
+		"joe thompson",
+		"mrs. thompson"
+		
+    ],
+    "sentiments": {
+        "john": {
+			"kate": 0,
+			"maggie": 0,
+			"farmer jones": 0,
+			"mrs. ellis": 0,
+			"joe thompson": 0,
+			"mrs. thompson": 0
+		},
+		"kate": {
+			"john": 0,
+			"maggie": 0,
+			"farmer jones": 0,
+			"mrs. ellis": 0,
+			"joe thompson": 0,
+			"mrs. thompson": 0
+		},
+		"maggie": {
+			"kate": 0,
+			"john": 0,
+			"farmer jones": 0,
+			"mrs. ellis": 0,
+			"joe thompson": 1,
+			"mrs. thompson": 1
+		},
+		"mrs. ellis": {
+			"kate": 1,
+			"maggie": -1,
+			"farmer jones": 0,
+			"john": 0,
+			"joe thompson": 0,
+			"mrs. thompson": 0
+		},
+		"joe thompson": {
+			"kate": 0,
+			"maggie": 1,
+			"farmer jones": 0,
+			"mrs. ellis": 0,
+			"john": 0,
+			"mrs. thompson": 1
+		},
+		"mrs. thompson": {
+			"kate": 0,
+			"maggie": -1,
+			"farmer jones": 0,
+			"mrs. ellis": 0,
+			"joe thompson": 1,
+			"john": 0
+		}
+    }
+}

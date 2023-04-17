@@ -1,0 +1,24 @@
+{
+    "characters": [
+        "ivan dmitritch tchervyakov",
+        "brizzhalov",
+        "wife"
+    ],
+    "sentiments": {
+        "ivan dmitritch tchervyakov": {
+            "ivan dmitritch tchervyakov": 0,
+            "brizzhalov": 1,
+            "wife": 0
+        },
+        "brizzhalov": {
+            "ivan dmitritch tchervyakov": -1,
+            "brizzhalov": 0,
+            "wife": 0
+        },
+        "wife": {
+            "ivan dmitritch tchervyakov": 0,
+            "brizzhalov": 0,
+            "wife": 0
+        }
+    }
+}

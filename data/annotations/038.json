@@ -1,0 +1,21 @@
+{
+    "characters": [
+        "shoemaker",
+		"woman"
+		"little men"
+    ],
+    "sentiments": {
+		"shoemaker": {
+			"woman": 0,
+			"little men": 1
+		},
+		"little men": {
+			"woman": 0,
+			"shoemaker" : 1
+		},
+		"woman": {
+			"shoemaker": 0,
+			"little men": 1
+		}
+    }
+}

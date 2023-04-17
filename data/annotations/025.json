@@ -1,0 +1,34 @@
+{
+    "characters": [
+        "farmer",
+        "neighbor",
+        "emperor",
+        "birbal"
+    ],
+    "sentiments": {
+        "farmer": {
+            "farmer": 0,
+            "neighbor": -1,
+            "emperor": 0,
+            "birbal": 0
+        },
+        "neighbor": {
+            "farmer": -1,
+            "neighbor": 0,
+            "emperor": 0,
+            "birbal": 0
+        },
+        "emperor": {
+            "farmer": 0,
+            "neighbor": 0,
+            "emperor": 0,
+            "birbal": 0
+        },
+        "birbal": {
+            "farmer": 0,
+            "neighbor": 0,
+            "emperor": 0,
+            "birbal": 0
+        }
+    }
+}

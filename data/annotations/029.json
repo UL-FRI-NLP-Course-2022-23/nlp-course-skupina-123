@@ -1,0 +1,16 @@
+{
+    "characters": [
+        "ants",
+        "grasshopper"
+    ],
+    "sentiments": {
+        "ants": {
+            "ants": 0,
+            "grasshopper": -1
+        },
+        "grasshopper": {
+            "ants": 0,
+            "grasshopper": 0
+        }
+    }
+}

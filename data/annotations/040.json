@@ -1,0 +1,30 @@
+{
+    "characters": [
+        "traveling monkey-man",
+		"monkey",
+		"wife",
+		"boar"
+    ],
+    "sentiments": {
+		"traveling monkey-man": {
+			"monkey": -1,
+			"wife": 0,
+			"boar": 0
+		},
+		"monkey": {
+			"traveling monkey-man": 0,
+			"wife": 0,
+			"boar": 1
+		},
+		"wife": {
+			"monkey": 1,
+			"traveling monkey-man": 0,
+			"boar": 0
+		},
+		"boar": {
+			"monkey": 1,
+			"wife": 0,
+			"traveling monkey-man": 0
+		},
+    }
+}

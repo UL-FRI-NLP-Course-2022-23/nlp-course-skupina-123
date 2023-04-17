@@ -1,0 +1,24 @@
+{
+    "characters": [
+        "farmer",
+        "mother",
+        "governor"
+    ],
+    "sentiments": {
+        "farmer": {
+            "farmer": 0,
+            "mother": 1,
+            "governor": 0
+        },
+        "mother": {
+            "farmer": 1,
+            "mother": 0,
+            "governor": 0
+        },
+        "governor": {
+            "farmer": 0,
+            "mother": 0,
+            "governor": 0
+        }
+    }
+}
