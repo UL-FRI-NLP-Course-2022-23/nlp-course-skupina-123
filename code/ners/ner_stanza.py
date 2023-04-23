@@ -11,6 +11,12 @@ def ner_stanza(story, stanza_nlp, use_cr=False):
   doc = stanza_nlp(story)
   return doc
 
+# story - text (whole story) (string)
+# stanza_nlp - initialized stanza pipeline (check stanza_sentiment.py main)
+# use_cr - use coreference resolution (boolean)
+def ner_stanza_person_entities(story, stanza_nlp, use_cr=False):
+  doc = ner_stanza(story, stanza_nlp, use_cr)
+  return list(filter(lambda e: e.type == "PERSON", doc.entities))
 
 def test_ner_stanza():
     text = "Joseph Robinette Biden Jr. is an American politician who is the 46th and\
