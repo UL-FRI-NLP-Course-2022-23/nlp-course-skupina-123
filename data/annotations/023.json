@@ -1,0 +1,34 @@
+{
+    "characters": [
+        "wife",
+        "mrs. brede",
+        "mr. brede",
+        "mr. jacobus"
+    ],
+    "sentiments": {
+        "wife": {
+            "wife": 0,
+            "mrs. brede": -1,
+            "mr. brede": 1,
+            "mr. jacobus": 0
+        },
+        "mrs. brede": {
+            "wife": -1,
+            "mrs. brede": 0,
+            "mr. brede": -1,
+            "mr. jacobus": 0
+        },
+        "mr. brede": {
+            "wife": 1,
+            "mrs. brede": -1,
+            "mr. brede": 0,
+            "mr. jacobus": 0
+        },
+        "mr. jacobus": {
+            "wife": 0,
+            "mrs. brede": 0,
+            "mr. brede": 0,
+            "mr. jacobus": 0
+        }
+    }
+}

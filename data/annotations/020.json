@@ -1,0 +1,34 @@
+{
+    "characters": [
+        "conradin",
+        "the doctor",
+        "mrs. de ropp",
+        "sredni vashtar"
+    ],
+    "sentiments": {
+        "conradin": {
+            "conradin": 0,
+            "the doctor": -1,
+            "mrs. de ropp": -1,
+            "sredni vashtar": 1
+        },
+        "the doctor": {
+            "conradin": -1,
+            "the doctor": 0,
+            "mrs. de ropp": -1,
+            "sredni vashtar": 0
+        },
+        "mrs. de ropp": {
+            "conradin": -1,
+            "the doctor": -1,
+            "mrs. de ropp": 0,
+            "sredni vashtar": -1
+        },
+        "sredni vashtar": {
+            "conradin": 1,
+            "the doctor": 0,
+            "mrs. de ropp": -1,
+            "sredni vashtar": 0
+        }
+    }
+}

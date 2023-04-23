@@ -1,0 +1,46 @@
+{
+    "characters": [
+        "clovis",
+        "the baroness",
+        "constance broddle",
+        "esme",
+        "william"
+    ],
+    "sentiments": {
+        "clovis": {
+            "clovis": 0,
+            "the baroness": 1,
+            "constance broddle": 0,
+            "esme": 0,
+            "william": 0
+        },
+        "the baroness": {
+            "clovis": 1,
+            "the baroness": 0,
+            "constance broddle": 1,
+            "esme": 1,
+            "william": -1
+        },
+        "constance broddle": {
+            "clovis": 0,
+            "the baroness": 1,
+            "constance broddle": 0,
+            "esme": -1,
+            "william": 0
+        },
+        "esme": {
+            "clovis": 0,
+            "the baroness": 1,
+            "constance broddle": 0,
+            "esme": 0,
+            "william": -1
+        },
+        "william": {
+            "clovis": 0,
+            "the baroness": -1,
+            "constance broddle": 0,
+            "esme": -1,
+            "william": 0
+        }
+    }
+}
