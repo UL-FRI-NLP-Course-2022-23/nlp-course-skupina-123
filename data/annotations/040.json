@@ -1,11 +1,11 @@
 {
-    "characters": [
-        "traveling monkey-man",
+	"characters": [
+		"traveling monkey-man",
 		"monkey",
 		"wife",
 		"boar"
-    ],
-    "sentiments": {
+	],
+	"sentiments": {
 		"traveling monkey-man": {
 			"monkey": -1,
 			"wife": 0,
@@ -25,6 +25,6 @@
 			"monkey": 1,
 			"wife": 0,
 			"traveling monkey-man": 0
-		},
-    }
+		}
+	}
 }

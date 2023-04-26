@@ -1,13 +1,13 @@
 {
-    "characters": [
-        "cinderella",
-		"mother-in-law"
+	"characters": [
+		"cinderella",
+		"mother-in-law",
 		"the eldest",
 		"the youngest",
 		"godmother",
 		"king's son"
-    ],
-    "sentiments": {
+	],
+	"sentiments": {
 		"cinderella": {
 			"mother-in-law": -1,
 			"the eldest": -1,
@@ -49,6 +49,6 @@
 			"the youngest": 0,
 			"godmother": 0,
 			"cinderella": 1
-		},
-    }
+		}
+	}
 }
