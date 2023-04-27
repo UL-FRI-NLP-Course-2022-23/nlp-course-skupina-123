@@ -1,19 +1,28 @@
-import sys
-
-sys.path.append('..')
-
+import spacy
 from helpers.helper_cr import perform_cr
 
-def ner_spacy(story, spacy_nlp, use_cr=False):
-    if use_cr == True:
-        story = perform_cr(story)
+class SpacyNer:
+    def __init__(self):
+        self.tagger = spacy.load("en_core_web_sm")
 
-    # Perform Spacy
-    doc = spacy_nlp(story)
+    def ner_spacy(self, story, use_cr=False):
+        if use_cr == True:
+            story = perform_cr(story)
 
-    # Extract only PERSON entities
-    persons = [ent for ent in doc.ents if ent.label_ in ['PERSON']]
+        # Perform Spacy
+        doc = self.tagger(story)
 
-    # To lower case and remove 's
-    persons = set([str(person).lower().replace("'s", "") for person in persons])
-    return persons
+        # Extract only PERSON entities
+        persons = [ent for ent in doc.ents if ent.label_ in ['PERSON']]
+
+        # To lower case and remove 's
+        persons = set([str(person).lower().replace("'s", "") for person in persons])
+        return persons
+
+    def test_ner_spacy(self):
+        text = "Joseph Robinette Biden Jr. is an American politician who is the 46th and\
+                current president of the United States. A member of the Democratic Party, \
+                he served as the 47th vice president from 2009 to 2017 under Barack Obama and\
+                represented Delaware in the United States Senate from 1973 to 2009."
+        print("Entities without CR", self.ner_spacy(text))
+        print("Entities with CR", self.ner_spacy(text, use_cr=True))

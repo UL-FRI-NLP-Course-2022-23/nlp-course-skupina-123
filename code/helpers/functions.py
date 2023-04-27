@@ -70,7 +70,7 @@ def overall_scores(flair=None, stanza=None, spacy=None):
         elif stanza != None:
             pred = "vnesi da se bo nardila stanza"
         elif spacy != None:
-            pred = "vnesi da se bo naredu spacy"
+            pred = spacy.ner_spacy(story)
 
         p_scores.append(percision_score(pred, characters))
         r_scores.append(recall_score(pred, characters))
