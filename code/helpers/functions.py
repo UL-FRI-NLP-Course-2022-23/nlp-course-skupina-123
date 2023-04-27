@@ -55,22 +55,27 @@ def f1_score(list1, list2):
         return 0
 
 
-def overall_scores(flair=None, stanza=None, spacy=None):
+def overall_scores(flair=None, stanza=None, spacy=None, use_cr=False):
     p_scores, r_scores, f1_scores = [], [], []
+    print('test2')
 
     if flair == None and stanza == None and spacy == None:
         return None
 
     for name in get_file_names():
+        print('test')
         story = read_story_from_file(name)
         characters = get_characters_from_file(name)
 
         if flair != None:
-            pred = flair.ner_flair(story)
+            print(f"Running FLAIR for {name}")
+            pred = flair.ner_flair(story, use_cr)
         elif stanza != None:
-            pred = "vnesi da se bo nardila stanza"
+            print(f"Running STANZA for {name}")
+            pred = stanza.ner_stanza(story, use_cr)
         elif spacy != None:
-            pred = spacy.ner_spacy(story)
+            print(f"Running SPACY for {name}")
+            pred = spacy.ner_spacy(story, use_cr)
 
         p_scores.append(percision_score(pred, characters))
         r_scores.append(recall_score(pred, characters))

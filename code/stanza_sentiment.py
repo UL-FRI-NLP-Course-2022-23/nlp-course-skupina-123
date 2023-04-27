@@ -1,6 +1,5 @@
-import stanza
 import pandas as pd
-from ners.ner_stanza import ner_stanza
+import ners.ner_stanza as ns
 
 def sentiment_mapping(sentiment_value):
     if sentiment_value == 0:
@@ -39,12 +38,11 @@ def perform_sentiment(df):
     return sentiment.sort_values("sentence_sentiment")
 
 if __name__ == "__main__":
-    stanza.download('en')
-    stanza_nlp = stanza.Pipeline('en')
+    stanza = ns.StanzaNer()
 
     story = read_story_from_file(file_name="007")
     
-    doc = ner_stanza(story, stanza_nlp, use_cr=True)
+    doc = stanza.ner_stanza_whole_doc(story, use_cr=True)
 
     person_df = get_person_df(get_person_entities(doc))
 
