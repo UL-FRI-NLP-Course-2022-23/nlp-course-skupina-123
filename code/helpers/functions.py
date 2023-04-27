@@ -57,13 +57,11 @@ def f1_score(list1, list2):
 
 def overall_scores(flair=None, stanza=None, spacy=None, use_cr=False):
     p_scores, r_scores, f1_scores = [], [], []
-    print('test2')
 
     if flair == None and stanza == None and spacy == None:
         return None
 
     for name in get_file_names():
-        print('test')
         story = read_story_from_file(name)
         characters = get_characters_from_file(name)
 
