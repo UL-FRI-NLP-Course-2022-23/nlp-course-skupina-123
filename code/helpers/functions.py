@@ -2,6 +2,7 @@ import json
 from Levenshtein import jaro, ratio
 import os
 import re
+import difflib
 
 
 def read_story_from_file(file_name):
@@ -22,7 +23,7 @@ def get_file_names():
 
 
 def string_similarity(s1, s2, threshold=0.5):
-    return ratio(s1, s2) >= threshold
+    return difflib.SequenceMatcher(a=s1.lower(), b=s2.lower()).ratio() >= threshold
 
 
 def true_positive(list1, list2):
