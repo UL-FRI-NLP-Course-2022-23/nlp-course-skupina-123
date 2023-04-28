@@ -2,6 +2,7 @@ import json
 from Levenshtein import jaro
 import os
 import re
+from sklearn.metrics import f1_score, precision_score, recall_score
 
 
 def read_story_from_file(file_name):
@@ -21,38 +22,38 @@ def get_file_names():
     return file_names
 
 
-def string_similarity(s1, s2, threshold=0.5):
-    return jaro(s1, s2) >= threshold
+# def string_similarity(s1, s2, threshold=0.5):
+#     return jaro(s1, s2) >= threshold
 
 
-def true_positive(list1, list2):
-    tp = 0
-    for x in list1:
-        for y in list2:
-            if string_similarity(x, y):
-                tp += 1
-                break
-    return tp
+# def true_positive(list1, list2):
+#     tp = 0
+#     for x in list1:
+#         for y in list2:
+#             if string_similarity(x, y):
+#                 tp += 1
+#                 break
+#     return tp
 
 
-def percision_score(list1, list2):
-    try:
-        return true_positive(list1, list2) / len(list1)
-    except ZeroDivisionError:
-        return 1
+# def percision_score(list1, list2):
+#     try:
+#         return true_positive(list1, list2) / len(list1)
+#     except ZeroDivisionError:
+#         return 1
 
 
-def recall_score(list1, list2):
-    return true_positive(list1, list2) / len(list2)
+# def recall_score(list1, list2):
+#     return true_positive(list1, list2) / len(list2)
 
 
-def f1_score(list1, list2):
-    per = percision_score(list1, list2)
-    recall = recall_score(list1, list2)
-    try:
-        return 2 * per * recall / (per + recall)
-    except ZeroDivisionError:
-        return 0
+# def f1_score(list1, list2):
+#     per = percision_score(list1, list2)
+#     recall = recall_score(list1, list2)
+#     try:
+#         return 2 * per * recall / (per + recall)
+#     except ZeroDivisionError:
+#         return 0
 
 
 def overall_scores(flair=None, stanza=None, spacy=None, use_cr=False):
@@ -75,9 +76,12 @@ def overall_scores(flair=None, stanza=None, spacy=None, use_cr=False):
             print(f"Running SPACY for {name}")
             pred = spacy.ner_spacy(story, use_cr)
 
-        p_scores.append(percision_score(pred, characters))
-        r_scores.append(recall_score(pred, characters))
-        f1_scores.append(f1_score(pred, characters))
+        # p_scores.append(percision_score(pred, characters))
+        # r_scores.append(recall_score(pred, characters))
+        # f1_scores.append(f1_score(pred, characters))
+        p_scores.append(precision_score(characters, pred))
+        r_scores.append(recall_score(characters, pred))
+        f1_scores.append(f1_score(characters, pred))
 
     return (
         sum(p_scores) / len(p_scores),
