@@ -68,6 +68,7 @@ def overall_scores(flair=None, stanza=None, spacy=None, use_cr=False):
         if flair != None:
             print(f"Running FLAIR for {name}")
             pred = flair.ner_flair(story, use_cr)
+            pred = flair.ner_flair(story)
         elif stanza != None:
             print(f"Running STANZA for {name}")
             pred = stanza.ner_stanza(story, use_cr)
