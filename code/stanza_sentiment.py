@@ -40,7 +40,7 @@ def perform_sentiment(df):
 if __name__ == "__main__":
     stanza = ns.StanzaNer()
 
-    story = read_story_from_file(file_name="007")
+    story = read_story_from_file(file_name="003")
     
     doc = stanza.ner_stanza_whole_doc(story, use_cr=True)
 
@@ -48,4 +48,5 @@ if __name__ == "__main__":
 
     sentiment_df = perform_sentiment(person_df)
 
+    print()
     print(sentiment_df.head())
