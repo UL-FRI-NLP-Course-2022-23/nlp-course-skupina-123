@@ -17,10 +17,14 @@ class StanzaNer:
             story = perform_cr(story)
 
         doc = self.tagger(story)
-        return list(set(filter(lambda e: e.type == "PERSON", doc.entities)))
+        persons = filter(lambda e: e.type == "PERSON", doc.entities)
+        return list(set([p.text.lower() for p in persons]))
 
     def ner_stanza_whole_doc(self, story, use_cr=False):
-        doc = self.ner_stanza(story, use_cr)
+        if use_cr == True:
+            story = perform_cr(story)
+
+        doc = self.tagger(story)
         return doc
 
     def test_ner_stanza(self):
