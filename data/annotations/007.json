@@ -1,40 +1,46 @@
 {
-    "characters": ["Vanka Zhukov", "Alyahin", "Konstantin Makaritch", "Eel", "Olga Ignatyevna"],
+    "characters": [
+        "vanka zhukov", 
+        "alyahin", 
+        "konstantin makaritch", 
+        "eel", 
+        "olga ignatyevna"
+    ],
     "sentiments": {
-        "Vanka Zhukov":  {
-            "Vanka Zhukov": 0,
-            "Alyahin": 1,
-            "Konstantin Makaritch": 1,
-            "Eel": 1, 
-            "Olga Ignatyevna": 1
+        "vanka zhukov":  {
+            "vanka zhukov": 0,
+            "alyahin": 1,
+            "konstantin makaritch": 1,
+            "eel": 1, 
+            "olga ignatyevna": 1
         },
-        "Alyahin": {
-            "Vanka Zhukov": 1,
-            "Alyahin": 0,
-            "Konstantin Makaritch": 0,
-            "Eel": 0,
-            "Olga Ignatyevna": 0
+        "alyahin": {
+            "vanka zhukov": 1,
+            "alyahin": 0,
+            "konstantin makaritch": 0,
+            "eel": 0,
+            "olga ignatyevna": 0
         },
-        "Konstantin Makaritch": {
-            "Vanka Zhukov": 1,
-            "Alyahin": 0,
-            "Konstantin Makaritch": 0,
-            "Eel": 1,
-            "Olga Ignatyevna": 1
+        "konstantin makaritch": {
+            "vanka zhukov": 1,
+            "alyahin": 0,
+            "konstantin makaritch": 0,
+            "eel": 1,
+            "olga ignatyevna": 1
         },
-        "Eel": {
-            "Vanka Zhukov": 1,
-            "Alyahin": 0,
-            "Konstantin Makaritch": 1,
-            "Eel": 0,
-            "Olga Ignatyevna": 1
+        "eel": {
+            "vanka zhukov": 1,
+            "alyahin": 0,
+            "konstantin makaritch": 1,
+            "eel": 0,
+            "olga ignatyevna": 1
         },
-        "Olga Ignatyevna": {
-            "Vanka Zhukov": 1,
-            "Alyahin": 0,
-            "Konstantin Makaritch": 1,
-            "Eel": 1,
-            "Olga Ignatyevna": 0
+        "olga ignatyevna": {
+            "vanka zhukov": 1,
+            "alyahin": 0,
+            "konstantin makaritch": 1,
+            "eel": 1,
+            "olga ignatyevna": 0
         }
     }
 }

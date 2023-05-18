@@ -1,28 +1,33 @@
 {
-    "characters": ["Giant", "children", "Cornish Ogre", "little boy"],
+    "characters": [
+        "giant", 
+        "children", 
+        "cornish ogre", 
+        "little boy"
+    ],
     "sentiments": {
-        "Giant":  {
-            "Giant": 0,
-            "children": 1,
-            "Cornish Ogre": 1,
+        "giant":  {
+            "giant": 0,
+            "children": -1,
+            "cornish ogre": 1,
             "little boy": 1
         },
         "children": {
-            "Giant": 1,
+            "giant": -1,
             "children": 0,
-            "Cornish Ogre": 0,
+            "cornish ogre": 0,
             "little boy": 0
         },
-        "Cornish Ogre": {
-            "Giant": 1,
+        "cornish ogre": {
+            "giant": 1,
             "children": 0,
-            "Cornish Ogre": 0,
+            "cornish ogre": 0,
             "little boy": 0
         },
         "little boy": {
-            "Giant": 1,
+            "giant": 1,
             "children": 0,
-            "Cornish Ogre": 0,
+            "cornish ogre": 0,
             "little boy": 0
         }
     }

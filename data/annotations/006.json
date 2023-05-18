@@ -1,29 +1,34 @@
 {
-    "characters": ["Jo", "Hetty Parlow", "Piute Indians", "Mrs. Darnell"],
+    "characters": [
+        "jo", 
+        "hetty parlow", 
+        "piute indians", 
+        "mrs. darnell"
+    ],
     "sentiments": {
-        "Jo":  {
-            "Jo": 0,
-            "Hetty Parlow": 1,
-            "Piute Indians": -1,
-            "Mrs. Darnell": 0
+        "jo":  {
+            "jo": 0,
+            "hetty parlow": 1,
+            "piute indians": -1,
+            "mrs. darnell": 0
         },
-        "Hetty Parlow": {
-            "Jo": 1,
-            "Hetty Parlow": 0,
-            "Piute Indians": 0,
-            "Mrs. Darnell": 0
+        "hetty parlow": {
+            "jo": 1,
+            "hetty parlow": 0,
+            "piute indians": 0,
+            "mrs. darnell": 0
         },
-        "Piute Indians": {
-            "Jo": -1,
-            "Hetty Parlow": 0,
-            "Piute Indians": 0,
-            "Mrs. Darnell": 0
+        "piute indians": {
+            "jo": -1,
+            "hetty parlow": 0,
+            "piute indians": 0,
+            "mrs. darnell": 0
         },
-        "Mrs. Darnell": {
-            "Jo": 0,
-            "Hetty Parlow": 0,
-            "Piute Indians": 0,
-            "Mrs. Darnell": 0
+        "mrs. darnell": {
+            "jo": 0,
+            "hetty parlow": 0,
+            "piute indians": 0,
+            "mrs. darnell": 0
         }
     }
 }
