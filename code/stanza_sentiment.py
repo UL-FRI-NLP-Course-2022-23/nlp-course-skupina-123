@@ -1,3 +1,4 @@
+import os
 import json
 import numpy as np
 import pandas as pd
@@ -97,9 +98,6 @@ def calculate_matrix(name_list, sentences, cor_res_sentences, align_rate):
 
     shape1 = occurrence_each_sentence.shape[0]
     sentiment_score = sentiment_score[0:shape1]
-    print(occurrence_each_sentence, occurrence_each_sentence.shape)
-    print(sentiment_score, len(sentiment_score))
-    print()
 
     co_occurrence_matrix = np.dot(occurrence_each_sentence.T, occurrence_each_sentence)
     sentiment_matrix = np.dot(occurrence_each_sentence.T, (occurrence_each_sentence.T * sentiment_score).T) + align_rate * co_occurrence_matrix
@@ -130,23 +128,26 @@ def generate_json(f_name, name_list, sentiment_matrix):
 
 if __name__ == "__main__":
     stanza = ns.StanzaNer()
-    for f in ["The_Lions_Share", "The_Cat_Maiden", "Androcles", "Hercules_and_the_Waggoner", "The_Asss_Brains", "The_Cock_and_the_Pearl"]:
-        print(f"Running for {f}")
-        story = read_story_from_file(file_name=f)
-        doc, cr_story = stanza.ner_stanza_whole_doc(story, use_cr=True)
-        
-        sentences = sent_tokenize(story)
-        cr_sentences = sent_tokenize(cr_story)
-        align_rate = calculate_align_rate(sentences)
-        
-        person_entities = [x.text.lower().replace("'s", "") for x in get_person_entities(doc)]
-        person_entities = [x.split(' ') for x in person_entities]
-        person_entities = [[word for word in x if not word in ['the', 'an', 'a', 'and']] for x in person_entities]
-        person_entities = [' '.join(x) for x in person_entities]
-        counts = Counter(person_entities)
-        person_entities = [x for x in counts]
-        counts = [counts[x] for x in counts]
-        
-        cooccurrence_matrix, sentiment_matrix = calculate_matrix(person_entities, sentences, cr_sentences, align_rate)
+    for fn in os.listdir("../data/stories"):
+        if not fn.startswith("0"):
+            f = fn.split(".")[0]
 
-        generate_json(f, person_entities, sentiment_matrix)
+            print(f"Running for {f}")
+            story = read_story_from_file(file_name=f)
+            doc, cr_story = stanza.ner_stanza_whole_doc(story, use_cr=True)
+            
+            sentences = sent_tokenize(story)
+            cr_sentences = sent_tokenize(cr_story)
+            align_rate = calculate_align_rate(sentences)
+            
+            person_entities = [x.text.lower().replace("'s", "") for x in get_person_entities(doc)]
+            person_entities = [x.split(' ') for x in person_entities]
+            person_entities = [[word for word in x if not word in ['the', 'an', 'a', 'and']] for x in person_entities]
+            person_entities = [' '.join(x) for x in person_entities]
+            counts = Counter(person_entities)
+            person_entities = [x for x in counts]
+            counts = [counts[x] for x in counts]
+            
+            cooccurrence_matrix, sentiment_matrix = calculate_matrix(person_entities, sentences, cr_sentences, align_rate)
+
+            generate_json(f, person_entities, sentiment_matrix)
