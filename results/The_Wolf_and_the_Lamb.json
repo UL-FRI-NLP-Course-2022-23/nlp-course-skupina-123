@@ -1,0 +1,24 @@
+{
+  "characters": [
+    "wolf",
+    "lamb",
+    "nay"
+  ],
+  "sentiments": {
+    "wolf": {
+      "wolf": 0.0,
+      "lamb": 0.0,
+      "nay": 0.0
+    },
+    "lamb": {
+      "wolf": -1.0,
+      "lamb": 0.0,
+      "nay": 0.0
+    },
+    "nay": {
+      "wolf": -0.5,
+      "lamb": -0.5,
+      "nay": 0.0
+    }
+  }
+}

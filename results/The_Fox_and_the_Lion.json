@@ -1,0 +1,16 @@
+{
+  "characters": [
+    "fox",
+    "lion"
+  ],
+  "sentiments": {
+    "fox": {
+      "fox": NaN,
+      "lion": NaN
+    },
+    "lion": {
+      "fox": NaN,
+      "lion": NaN
+    }
+  }
+}

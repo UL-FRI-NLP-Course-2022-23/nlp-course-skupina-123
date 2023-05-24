@@ -1,0 +1,10 @@
+{
+  "characters": [
+    "bald_man"
+  ],
+  "sentiments": {
+    "bald_man": {
+      "bald_man": 0.0
+    }
+  }
+}

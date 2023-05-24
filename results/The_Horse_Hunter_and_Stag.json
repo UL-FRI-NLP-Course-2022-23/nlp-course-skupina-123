@@ -1,0 +1,34 @@
+{
+  "characters": [
+    "horse",
+    "hunter",
+    "stag",
+    "horse_for_horse"
+  ],
+  "sentiments": {
+    "horse": {
+      "horse": 0.0,
+      "hunter": 0.0,
+      "stag": 0.0,
+      "horse_for_horse": 0.0
+    },
+    "hunter": {
+      "horse": -1.0,
+      "hunter": 0.0,
+      "stag": 0.0,
+      "horse_for_horse": 0.0
+    },
+    "stag": {
+      "horse": -0.7,
+      "hunter": -0.7,
+      "stag": 0.0,
+      "horse_for_horse": 0.0
+    },
+    "horse_for_horse": {
+      "horse": 0.0,
+      "hunter": 0.0,
+      "stag": 0.0,
+      "horse_for_horse": 0.0
+    }
+  }
+}

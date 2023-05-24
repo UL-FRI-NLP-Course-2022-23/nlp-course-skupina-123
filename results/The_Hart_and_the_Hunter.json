@@ -1,0 +1,16 @@
+{
+  "characters": [
+    "hart",
+    "hunter"
+  ],
+  "sentiments": {
+    "hart": {
+      "hart": 0.0,
+      "hunter": 0.0
+    },
+    "hunter": {
+      "hart": -1.0,
+      "hunter": 0.0
+    }
+  }
+}
