@@ -6,10 +6,12 @@
     ],
     "sentiments": {
         "yegor vlassitch": {
+            "yegor vlassitch": 0,
 			"pelegea": -1
 		},
 		"pelegea": {
-			"yegor vlassitch": 1
+			"yegor vlassitch": 1,
+            "pelegea": 0
 		}
     }
 }

@@ -7,24 +7,28 @@
 	],
 	"sentiments": {
 		"liitle wee bear": {
+			"liitle wee bear": 0,
 			"middle-size bear": 1,
 			"great big bear": 1,
 			"goldilocks": 0
 		},
 		"middle-size bear": {
 			"liitle wee bear": 1,
+			"middle-size bear": 0,
 			"great big bear": 1,
 			"goldilocks": 0
 		},
 		"great big bear": {
 			"middle-size bear": 1,
 			"liitle wee bear": 1,
+			"great big bear": 0,
 			"goldilocks": 0
 		},
 		"goldilocks": {
 			"middle-size bear": -1,
 			"great big bear": -1,
-			"liitle wee bear": -1
+			"liitle wee bear": -1,
+			"goldilocks": 0
 		}
 	}
 }

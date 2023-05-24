@@ -12,6 +12,7 @@
     ],
     "sentiments": {
         "john": {
+			"john": 0,
 			"kate": 0,
 			"maggie": 0,
 			"farmer jones": 0,
@@ -21,6 +22,7 @@
 		},
 		"kate": {
 			"john": 0,
+			"kate": 0,
 			"maggie": 0,
 			"farmer jones": 0,
 			"mrs. ellis": 0,
@@ -30,6 +32,7 @@
 		"maggie": {
 			"kate": 0,
 			"john": 0,
+			"maggie": 0,
 			"farmer jones": 0,
 			"mrs. ellis": 0,
 			"joe thompson": 1,
@@ -39,6 +42,7 @@
 			"kate": 1,
 			"maggie": -1,
 			"farmer jones": 0,
+			"mrs. ellis": 0,
 			"john": 0,
 			"joe thompson": 0,
 			"mrs. thompson": 0
@@ -48,6 +52,7 @@
 			"maggie": 1,
 			"farmer jones": 0,
 			"mrs. ellis": 0,
+			"joe thompson": 0,
 			"john": 0,
 			"mrs. thompson": 1
 		},
@@ -56,6 +61,7 @@
 			"maggie": -1,
 			"farmer jones": 0,
 			"mrs. ellis": 0,
+			"mrs. thompson": 0,
 			"joe thompson": 1,
 			"john": 0
 		}
