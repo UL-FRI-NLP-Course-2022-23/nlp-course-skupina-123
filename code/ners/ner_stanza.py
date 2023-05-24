@@ -25,7 +25,7 @@ class StanzaNer:
             story = perform_cr(story)
 
         doc = self.tagger(story)
-        return doc
+        return doc, story
 
     def test_ner_stanza(self):
         text = "Joseph Robinette Biden Jr. is an American politician who is the 46th and\
