@@ -3,7 +3,7 @@
     "fox",
     "cock",
     "lion",
-    "king_lion",
+    "king lion",
     "dog",
     "cunning"
   ],
@@ -12,7 +12,7 @@
       "fox": 0.0,
       "cock": 0.0,
       "lion": 0.0,
-      "king_lion": 0.0,
+      "king lion": 0.0,
       "dog": 0.0,
       "cunning": 0.0
     },
@@ -20,7 +20,7 @@
       "fox": -1.0,
       "cock": 0.0,
       "lion": 0.0,
-      "king_lion": 0.0,
+      "king lion": 0.0,
       "dog": 0.0,
       "cunning": 0.0
     },
@@ -28,15 +28,15 @@
       "fox": 0.0,
       "cock": 0.0,
       "lion": 0.0,
-      "king_lion": 0.0,
+      "king lion": 0.0,
       "dog": 0.0,
       "cunning": 0.0
     },
-    "king_lion": {
+    "king lion": {
       "fox": -0.3333333333333333,
       "cock": -0.3333333333333333,
       "lion": 0.0,
-      "king_lion": 0.0,
+      "king lion": 0.0,
       "dog": 0.0,
       "cunning": 0.0
     },
@@ -44,7 +44,7 @@
       "fox": -0.3333333333333333,
       "cock": -0.5,
       "lion": 0.0,
-      "king_lion": -0.3333333333333333,
+      "king lion": -0.3333333333333333,
       "dog": 0.0,
       "cunning": 0.0
     },
@@ -52,7 +52,7 @@
       "fox": -0.3333333333333333,
       "cock": 0.0,
       "lion": 0.0,
-      "king_lion": -0.3333333333333333,
+      "king lion": -0.3333333333333333,
       "dog": -0.3333333333333333,
       "cunning": 0.0
     }

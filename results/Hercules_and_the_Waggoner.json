@@ -1,24 +1,24 @@
 {
   "characters": [
     "waggoner",
-    "hercules_strong",
-    "this_waggoner"
+    "hercules strong",
+    "this waggoner"
   ],
   "sentiments": {
     "waggoner": {
       "waggoner": 0.0,
-      "hercules_strong": 0.0,
-      "this_waggoner": 0.0
+      "hercules strong": 0.0,
+      "this waggoner": 0.0
     },
-    "hercules_strong": {
+    "hercules strong": {
       "waggoner": 0.0,
-      "hercules_strong": 0.0,
-      "this_waggoner": 0.0
+      "hercules strong": 0.0,
+      "this waggoner": 0.0
     },
-    "this_waggoner": {
+    "this waggoner": {
       "waggoner": 0.0,
-      "hercules_strong": 0.0,
-      "this_waggoner": 0.0
+      "hercules strong": 0.0,
+      "this waggoner": 0.0
     }
   }
 }

@@ -2,32 +2,32 @@
   "characters": [
     "frog",
     "tush",
-    "farmer_white",
+    "farmer white",
     "ox"
   ],
   "sentiments": {
     "frog": {
       "frog": 0.0,
       "tush": 0.0,
-      "farmer_white": 0.0,
+      "farmer white": 0.0,
       "ox": 0.0
     },
     "tush": {
       "frog": -0.2727272727272727,
       "tush": 0.0,
-      "farmer_white": 0.0,
+      "farmer white": 0.0,
       "ox": 0.0
     },
-    "farmer_white": {
+    "farmer white": {
       "frog": -0.45454545454545453,
       "tush": -0.2727272727272727,
-      "farmer_white": 0.0,
+      "farmer white": 0.0,
       "ox": 0.0
     },
     "ox": {
       "frog": -0.45454545454545453,
       "tush": -0.2727272727272727,
-      "farmer_white": -1.0,
+      "farmer white": -1.0,
       "ox": 0.0
     }
   }
