@@ -7,7 +7,7 @@ def visualize(file_name):
     
     G = nx.DiGraph()
 
-    with open(f"../data/annotations/{file_name}.json", encoding="utf8") as f:
+    with open(f"./data/annotations/{file_name}.json", encoding="utf8") as f:
 
         # Extract data from json
         data = json.load(f)
