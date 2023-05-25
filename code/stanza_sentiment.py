@@ -149,5 +149,6 @@ if __name__ == "__main__":
             counts = [counts[x] for x in counts]
             
             cooccurrence_matrix, sentiment_matrix = calculate_matrix(person_entities, sentences, cr_sentences, align_rate)
+            person_entities = [name.replace("_", " ") for name in person_entities]
 
             generate_json(f, person_entities, sentiment_matrix)
