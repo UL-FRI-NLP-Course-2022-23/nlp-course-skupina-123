@@ -2,6 +2,8 @@ import json
 import networkx as nx
 import matplotlib.pyplot as plt
 
+NODE_SIZE = 5500
+
 def visualize(file_name):
     print("Starting visualization...")
     
@@ -34,8 +36,9 @@ def visualize(file_name):
                         neutral_edges.append((character_from, character_to))
 
         # Draw DiGraph
+        plt.title('Character sentiments visualization')
         pos = nx.spring_layout(G)
-        nx.draw_networkx_nodes(G, pos, cmap=plt.get_cmap('jet'), node_size = 8000)
+        nx.draw_networkx_nodes(G, pos, cmap=plt.get_cmap('jet'), node_size = NODE_SIZE)
         nx.draw_networkx_labels(G, pos)
 
         nx.draw_networkx_edges(G, 
@@ -43,7 +46,7 @@ def visualize(file_name):
                                width=2,
                                edgelist=negative_edges, 
                                edge_color='r',
-                               arrows=True,
+                               arrows=True, arrowsize=15, node_size=NODE_SIZE,
                                connectionstyle='arc3, rad = 0.05')
         
         nx.draw_networkx_edges(G, 
@@ -51,14 +54,14 @@ def visualize(file_name):
                                width=2,
                                edgelist=positive_edges, 
                                edge_color='g', 
-                               arrows=True,
+                               arrows=True, arrowsize=15, node_size=NODE_SIZE,
                                connectionstyle='arc3, rad = 0.05')
         
         nx.draw_networkx_edges(G, 
                                pos, 
                                edgelist=neutral_edges, 
-                               arrows=True,
+                               arrows=True, arrowsize=15, node_size=NODE_SIZE,
                                connectionstyle='arc3, rad = 0.05')
-        plt.show()
+        plt.savefig('vis1.png', bbox_inches='tight', dpi=500)
 
     print("Ending visualization...")
