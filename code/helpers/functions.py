@@ -1,3 +1,4 @@
+import copy
 import json
 from Levenshtein import jaro
 import os
@@ -14,6 +15,13 @@ def get_characters_from_file(file_name):
         return json.load(f)["characters"]
 
 
+def get_sentiment_from_file(file_name, gt=True):
+    if gt:
+        with open(f"../data/annotations/{file_name}.json", encoding="utf8") as f:
+            return json.load(f)["sentiments"]
+    return None
+
+
 def get_file_names():
     path = "../data/stories/"
     file_names = os.listdir(path)
@@ -22,32 +30,40 @@ def get_file_names():
 
 
 def string_similarity(s1, s2, threshold=0.5):
-    return jaro(s1, s2) >= threshold
+    return jaro(s1.lower(), s2.lower()) >= threshold
 
 
 def true_positive(list1, list2):
     tp = 0
+    l2 = copy.deepcopy(list2)
     for x in list1:
-        for y in list2:
+        for y in l2:
             if string_similarity(x, y):
                 tp += 1
+                l2.remove(y)
                 break
     return tp
 
 
-def percision_score(list1, list2):
-    try:
-        return true_positive(list1, list2) / len(list1)
-    except ZeroDivisionError:
+def precision_score(list1, list2):
+    if len(list1) + len(list2) == 0:
         return 1
-
-
-def recall_score(list1, list2):
+    if len(list2) == 0:
+        return 0
     return true_positive(list1, list2) / len(list2)
 
 
+def recall_score(list1, list2):
+    if len(list1) + len(list2) == 0:
+        return 1
+    if len(list1) == 0:
+        return 0
+    return true_positive(list1, list2) / len(list1)
+
+
+
 def f1_score(list1, list2):
-    per = percision_score(list1, list2)
+    per = precision_score(list1, list2)
     recall = recall_score(list1, list2)
     try:
         return 2 * per * recall / (per + recall)
@@ -75,7 +91,7 @@ def overall_scores(flair=None, stanza=None, spacy=None, use_cr=False):
             print(f"Running SPACY for {name}")
             pred = spacy.ner_spacy(story, use_cr)
 
-        p_scores.append(percision_score(pred, characters))
+        p_scores.append(precision_score(pred, characters))
         r_scores.append(recall_score(pred, characters))
         f1_scores.append(f1_score(pred, characters))
     return (
