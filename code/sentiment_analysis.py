@@ -91,7 +91,7 @@ def calculate_matrix(name_list, sentiment_score, cor_res_sentences):
 
     shape1 = occurrence_each_sentence.shape[0]
     sentiment_score = sentiment_score[0:shape1]
-    
+
     co_occurrence_matrix = np.dot(occurrence_each_sentence.T, occurrence_each_sentence)
     sentiment_matrix = np.dot(occurrence_each_sentence.T, (occurrence_each_sentence.T * sentiment_score).T)
     sentiment_matrix += align_rate * co_occurrence_matrix
@@ -184,10 +184,10 @@ if __name__ == "__main__":
             story = read_story_from_file(file_name=f)
             doc, cr_story = stanza.ner_stanza_whole_doc(story, use_cr=True)
 
-            sentiment_score = []
-            for doc_sentence in doc.sentences:
-                sentiment_score.append(float(doc_sentence.sentiment) - 1)
-            # sentences = sent_tokenize(story) # uncomment for afinn
+            sentiment_score = [] #stanza
+            for doc_sentence in doc.sentences: # stanza
+                sentiment_score.append(float(doc_sentence.sentiment) - 1) # stanza
+            # sentences = sent_tokenize(story) # afinn
             cr_sentences = sent_tokenize(cr_story)
             
             person_entities = [x.text.lower().replace("'s", "") for x in get_person_entities(doc)]
@@ -198,9 +198,9 @@ if __name__ == "__main__":
             person_entities = [x for x in counts]
             counts = [counts[x] for x in counts]
             
-            cooccurrence_matrix, sentiment_matrix = calculate_matrix(person_entities, sentiment_score, cr_sentences)
-            # cooccurrence_matrix, sentiment_matrix = calculate_matrix_afinn(person_entities, sentences, cr_sentences)
+            cooccurrence_matrix, sentiment_matrix = calculate_matrix(person_entities, sentiment_score, cr_sentences) # stanza
+            # cooccurrence_matrix, sentiment_matrix = calculate_matrix_afinn(person_entities, sentences, cr_sentences) # afinn
             person_entities = [name.replace("_", " ") for name in person_entities]
 
-            generate_json(f, person_entities, sentiment_matrix)
-            # generate_json(f"{f}_afinn", person_entities, sentiment_matrix)
+            generate_json(f, person_entities, sentiment_matrix) # stanza
+            # generate_json(f"{f}_afinn", person_entities, sentiment_matrix) # afinn
