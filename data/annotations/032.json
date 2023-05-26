@@ -5,10 +5,12 @@
     ],
     "sentiments": {
         "roger": {
+            "roger": 0,
             "mrs. luella bates washingtion jones": 1
         },
 		"mrs. luella bates washingtion jones": {
-			"roger": 1
+			"roger": 1,
+            "mrs. luella bates washingtion jones": 0
 		}
     }
 }

@@ -1,0 +1,60 @@
+{
+  "characters": [
+    "fox",
+    "cock",
+    "lion",
+    "king lion",
+    "dog",
+    "cunning"
+  ],
+  "sentiments": {
+    "fox": {
+      "fox": 0.0,
+      "cock": 0.0,
+      "lion": 0.0,
+      "king lion": 0.0,
+      "dog": 0.0,
+      "cunning": 0.0
+    },
+    "cock": {
+      "fox": -1.0,
+      "cock": 0.0,
+      "lion": 0.0,
+      "king lion": 0.0,
+      "dog": 0.0,
+      "cunning": 0.0
+    },
+    "lion": {
+      "fox": 0.0,
+      "cock": 0.0,
+      "lion": 0.0,
+      "king lion": 0.0,
+      "dog": 0.0,
+      "cunning": 0.0
+    },
+    "king lion": {
+      "fox": -0.3333333333333333,
+      "cock": -0.3333333333333333,
+      "lion": 0.0,
+      "king lion": 0.0,
+      "dog": 0.0,
+      "cunning": 0.0
+    },
+    "dog": {
+      "fox": -0.3333333333333333,
+      "cock": -0.5,
+      "lion": 0.0,
+      "king lion": -0.3333333333333333,
+      "dog": 0.0,
+      "cunning": 0.0
+    },
+    "cunning": {
+      "fox": -0.3333333333333333,
+      "cock": 0.0,
+      "lion": 0.0,
+      "king lion": -0.3333333333333333,
+      "dog": -0.3333333333333333,
+      "cunning": 0.0
+    }
+  }
+}
