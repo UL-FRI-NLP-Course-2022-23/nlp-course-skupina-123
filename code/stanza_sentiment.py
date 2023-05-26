@@ -89,6 +89,9 @@ def calculate_matrix(name_list, sentiment_score, cor_res_sentences):
     else:
         occurrence_each_sentence = name_vec.fit_transform(cor_res_sentences).toarray()
 
+    shape1 = occurrence_each_sentence.shape[0]
+    sentiment_score = sentiment_score[0:shape1]
+    
     co_occurrence_matrix = np.dot(occurrence_each_sentence.T, occurrence_each_sentence)
     sentiment_matrix = np.dot(occurrence_each_sentence.T, (occurrence_each_sentence.T * sentiment_score).T)
     sentiment_matrix += align_rate * co_occurrence_matrix
