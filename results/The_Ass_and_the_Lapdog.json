@@ -11,13 +11,13 @@
       "ass": 0.0
     },
     "lapdog": {
-      "farmer": -1.0,
+      "farmer": 0.0,
       "lapdog": 0.0,
       "ass": 0.0
     },
     "ass": {
-      "farmer": -0.75,
-      "lapdog": -0.36111111111111116,
+      "farmer": 0.0,
+      "lapdog": 0.0,
       "ass": 0.0
     }
   }

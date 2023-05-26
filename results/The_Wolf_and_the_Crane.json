@@ -9,7 +9,7 @@
       "crane": 0.0
     },
     "crane": {
-      "wolf": -1.0,
+      "wolf": 1.0,
       "crane": 0.0
     }
   }

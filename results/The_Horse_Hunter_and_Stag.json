@@ -13,14 +13,14 @@
       "horse for horse": 0.0
     },
     "hunter": {
-      "horse": -1.0,
+      "horse": 0.0,
       "hunter": 0.0,
       "stag": 0.0,
       "horse for horse": 0.0
     },
     "stag": {
-      "horse": -0.7,
-      "hunter": -0.7,
+      "horse": 0.0,
+      "hunter": 0.0,
       "stag": 0.0,
       "horse for horse": 0.0
     },

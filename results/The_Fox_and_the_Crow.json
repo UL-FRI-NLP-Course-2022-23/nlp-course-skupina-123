@@ -11,13 +11,13 @@
       "flatter": 0.0
     },
     "crow": {
-      "fox": -1.0,
+      "fox": 1.0,
       "crow": 0.0,
       "flatter": 0.0
     },
     "flatter": {
-      "fox": -0.25,
-      "crow": -0.25,
+      "fox": 0.25,
+      "crow": 0.25,
       "flatter": 0.0
     }
   }

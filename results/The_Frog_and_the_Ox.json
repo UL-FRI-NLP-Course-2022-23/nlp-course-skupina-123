@@ -13,21 +13,21 @@
       "ox": 0.0
     },
     "tush": {
-      "frog": -0.2727272727272727,
+      "frog": 0.2,
       "tush": 0.0,
       "farmer white": 0.0,
       "ox": 0.0
     },
     "farmer white": {
-      "frog": -0.45454545454545453,
-      "tush": -0.2727272727272727,
+      "frog": 0.4,
+      "tush": 0.2,
       "farmer white": 0.0,
       "ox": 0.0
     },
     "ox": {
-      "frog": -0.45454545454545453,
-      "tush": -0.2727272727272727,
-      "farmer white": -1.0,
+      "frog": 0.4,
+      "tush": 0.2,
+      "farmer white": 1.0,
       "ox": 0.0
     }
   }
