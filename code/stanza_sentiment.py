@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import ners.ner_stanza as ns
 
+from afinn import Afinn
 from collections import Counter
 from nltk.tokenize import sent_tokenize
 from sklearn.feature_extraction.text import CountVectorizer
@@ -44,7 +45,7 @@ def perform_sentiment(df):
 
     return sentiment.sort_values("sentence_sentiment")
 
-def calculate_matrix(name_list, sentences, cor_res_sentences):
+def calculate_matrix(name_list, sentiment_score, cor_res_sentences):
     '''
     Function to calculate the co-occurrence matrix and sentiment matrix among all the top characters
     :param name_list: the list of names of the top characters in the novel.
@@ -55,11 +56,65 @@ def calculate_matrix(name_list, sentences, cor_res_sentences):
     '''
 
     # calculate a sentiment score for each sentence in the novel
-    sentiment_score = []
-    # for sentence in sentences:
-    doc = stanza_pretokenized.tagger(sentences)
-    for doc_sentence in doc.sentences:
-        sentiment_score.append(float(doc_sentence.sentiment) - 1)
+    # sentiment_score = []
+    # # for sentence in sentences:
+    # doc = stanza.tagger(sentences)
+    # for doc_sentence in doc.sentences:
+    #     sentiment_score.append(float(doc_sentence.sentiment) - 1)
+
+    l = len(np.nonzero(sentiment_score)[0])
+    if l == 0:
+        l = 1
+    
+    align_rate = np.sum(sentiment_score) / l * -2
+
+    # replace name occurrences with names that can be vectorized
+    for i in range(len(cor_res_sentences)):
+        cor_res_sentences[i] = cor_res_sentences[i].lower()
+
+        for name in name_list:
+            tmp = name.split(" ")
+            tmp = "_".join(tmp)
+            cor_res_sentences[i] = cor_res_sentences[i].replace(name, tmp)
+
+    for i in range(len(name_list)):
+        tmp = name_list[i].split(" ")
+        name_list[i] = "_".join(tmp)
+
+    name_vec = CountVectorizer(vocabulary=name_list, binary=True)
+
+    # calculate occurrence matrix and sentiment matrix among the top characters
+    if (len(name_list) == 0):
+        return np.array([]), np.array([]), np.array([]), np.array([])
+    else:
+        occurrence_each_sentence = name_vec.fit_transform(cor_res_sentences).toarray()
+
+    co_occurrence_matrix = np.dot(occurrence_each_sentence.T, occurrence_each_sentence)
+    sentiment_matrix = np.dot(occurrence_each_sentence.T, (occurrence_each_sentence.T * sentiment_score).T)
+    sentiment_matrix += align_rate * co_occurrence_matrix
+    co_occurrence_matrix = np.tril(co_occurrence_matrix)
+    sentiment_matrix = np.tril(sentiment_matrix)
+
+    # diagonals of the matrices are set to be 0 (co-occurrence of name itself is meaningless)
+    shape = co_occurrence_matrix.shape[0]
+    co_occurrence_matrix[[range(shape)], [range(shape)]] = 0
+    sentiment_matrix[[range(shape)], [range(shape)]] = 0
+
+    return co_occurrence_matrix, sentiment_matrix
+
+def calculate_matrix_afinn(name_list, sentences, cor_res_sentences):
+    '''
+    Function to calculate the co-occurrence matrix and sentiment matrix among all the top characters
+    :param name_list: the list of names of the top characters in the novel.
+    :param sentences: the list of sentences in the novel.
+    :param align_rate: the sentiment alignment rate to align the sentiment score between characters due to the writing style of
+    the author. Every co-occurrence will lead to an increase or decrease of one unit of align_rate.
+    :return: the co-occurrence matrix and sentiment matrix.
+    '''
+
+    afinn = Afinn()
+    # calculate a sentiment score for each sentence in the novel
+    sentiment_score = [afinn.score(x) for x in sentences]
 
     l = len(np.nonzero(sentiment_score)[0])
     if l == 0:
@@ -118,7 +173,6 @@ def generate_json(f_name, name_list, sentiment_matrix):
 
 if __name__ == "__main__":
     stanza = ns.StanzaNer()
-    stanza_pretokenized = ns.StanzaNer(tokenize_pretokenized=True)
     for fn in os.listdir("../data/stories"):
         if not fn.startswith("0") and not fn.startswith("split"):
             f = fn.split(".")[0]
@@ -127,7 +181,10 @@ if __name__ == "__main__":
             story = read_story_from_file(file_name=f)
             doc, cr_story = stanza.ner_stanza_whole_doc(story, use_cr=True)
 
-            sentences = sent_tokenize(story)
+            sentiment_score = []
+            for doc_sentence in doc.sentences:
+                sentiment_score.append(float(doc_sentence.sentiment) - 1)
+            # sentences = sent_tokenize(story) # uncomment for afinn
             cr_sentences = sent_tokenize(cr_story)
             
             person_entities = [x.text.lower().replace("'s", "") for x in get_person_entities(doc)]
@@ -138,7 +195,9 @@ if __name__ == "__main__":
             person_entities = [x for x in counts]
             counts = [counts[x] for x in counts]
             
-            cooccurrence_matrix, sentiment_matrix = calculate_matrix(person_entities, sentences, cr_sentences)
+            cooccurrence_matrix, sentiment_matrix = calculate_matrix(person_entities, sentiment_score, cr_sentences)
+            # cooccurrence_matrix, sentiment_matrix = calculate_matrix_afinn(person_entities, sentences, cr_sentences)
             person_entities = [name.replace("_", " ") for name in person_entities]
 
             generate_json(f, person_entities, sentiment_matrix)
+            # generate_json(f"{f}_afinn", person_entities, sentiment_matrix)
