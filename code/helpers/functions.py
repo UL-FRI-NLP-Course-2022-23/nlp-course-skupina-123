@@ -10,16 +10,36 @@ def read_story_from_file(file_name):
         return f.read()
 
 
-def get_characters_from_file(file_name):
-    with open(f"../data/annotations/{file_name}.json", encoding="utf8") as f:
-        return json.load(f)["characters"]
+def calculate_average(numbers):
+    if len(numbers) == 0:
+        return 0
+    total = sum(numbers)
+    average = total / len(numbers)
+    return average
+
+
+def get_characters_from_file(file_name, gt=True):
+    if gt:
+        with open(f"../data/annotations/{file_name}.json", encoding="utf8") as f:
+            return json.load(f)["characters"]
+    else:
+        with open(f"../results/{file_name}.json", encoding="utf8") as f:
+            return json.load(f)["characters"]
 
 
 def get_sentiment_from_file(file_name, gt=True):
     if gt:
         with open(f"../data/annotations/{file_name}.json", encoding="utf8") as f:
             return json.load(f)["sentiments"]
-    return None
+    else:
+        with open(f"../results/{file_name}.json", encoding="utf8") as f:
+            return json.load(f)["sentiments"]
+
+
+def compare_lists(list1, list2):
+    if len(list1) != len(list2):
+        return False
+    return set(map(str.lower, list1)) == set(map(str.lower, list2))
 
 
 def get_file_names():
@@ -59,7 +79,6 @@ def recall_score(list1, list2):
     if len(list1) == 0:
         return 0
     return true_positive(list1, list2) / len(list1)
-
 
 
 def f1_score(list1, list2):
