@@ -1,0 +1,10 @@
+{
+  "characters": [
+    "fisher"
+  ],
+  "sentiments": {
+    "fisher": {
+      "fisher": 0.0
+    }
+  }
+}

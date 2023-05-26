@@ -1,0 +1,24 @@
+{
+  "characters": [
+    "hare",
+    "tortoise",
+    "plodding"
+  ],
+  "sentiments": {
+    "hare": {
+      "hare": 0.0,
+      "tortoise": 0.0,
+      "plodding": 0.0
+    },
+    "tortoise": {
+      "hare": -1.0,
+      "tortoise": 0.0,
+      "plodding": 0.0
+    },
+    "plodding": {
+      "hare": 0.0,
+      "tortoise": 0.0,
+      "plodding": 0.0
+    }
+  }
+}

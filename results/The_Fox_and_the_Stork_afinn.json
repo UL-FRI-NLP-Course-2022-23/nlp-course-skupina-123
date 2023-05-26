@@ -1,0 +1,16 @@
+{
+  "characters": [
+    "fox",
+    "stork"
+  ],
+  "sentiments": {
+    "fox": {
+      "fox": 0.0,
+      "stork": 0.0
+    },
+    "stork": {
+      "fox": 0.0,
+      "stork": 0.0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "characters": [
+    "fisher",
+    "fish"
+  ],
+  "sentiments": {
+    "fisher": {
+      "fisher": 0.0,
+      "fish": 0.0
+    },
+    "fish": {
+      "fisher": -1.0,
+      "fish": 0.0
+    }
+  }
+}

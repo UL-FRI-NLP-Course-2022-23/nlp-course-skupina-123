@@ -1,0 +1,24 @@
+{
+  "characters": [
+    "fox",
+    "crow",
+    "flatter"
+  ],
+  "sentiments": {
+    "fox": {
+      "fox": 0.0,
+      "crow": 0.0,
+      "flatter": 0.0
+    },
+    "crow": {
+      "fox": -1.0,
+      "crow": 0.0,
+      "flatter": 0.0
+    },
+    "flatter": {
+      "fox": -0.5833333333333334,
+      "crow": -0.5833333333333334,
+      "flatter": 0.0
+    }
+  }
+}

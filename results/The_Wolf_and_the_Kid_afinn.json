@@ -1,0 +1,16 @@
+{
+  "characters": [
+    "wolf",
+    "kid"
+  ],
+  "sentiments": {
+    "wolf": {
+      "wolf": 0.0,
+      "kid": 0.0
+    },
+    "kid": {
+      "wolf": 1.0,
+      "kid": 0.0
+    }
+  }
+}
