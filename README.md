@@ -7,6 +7,7 @@ Team members:
  
 Group public acronym/name: `skupina123`
 
+# Instructions for usage  
 Instructions for installation:
 `pip install allennlp allennlp-models stanza spacy numpy pandas afinn nltk scikit-learn Levenshtein networkx`
 
