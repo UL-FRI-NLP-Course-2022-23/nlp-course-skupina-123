@@ -5,12 +5,12 @@
   ],
   "sentiments": {
     "fox": {
-      "fox": NaN,
-      "lion": NaN
+      "fox": 0.0,
+      "lion": 0.0
     },
     "lion": {
-      "fox": NaN,
-      "lion": NaN
+      "fox": -1.0,
+      "lion": 0.0
     }
   }
 }

@@ -53,8 +53,12 @@ def calculate_align_rate(sentence_list):
         doc = stanza.tagger(sentence)
         for doc_sentence in doc.sentences:
             sentiment_score.append(float(doc_sentence.sentiment))
+
+    l = len(np.nonzero(sentiment_score)[0])
+    if l == 0:
+        l = 1
     
-    align_rate = np.sum(sentiment_score) / len(np.nonzero(sentiment_score)[0]) * -2
+    align_rate = np.sum(sentiment_score) / l * -2
 
     return align_rate
 
