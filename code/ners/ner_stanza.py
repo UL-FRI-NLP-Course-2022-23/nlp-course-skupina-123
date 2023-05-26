@@ -6,9 +6,9 @@ sys.path.append("..")
 from helpers.helper_cr import perform_cr
 
 class StanzaNer:
-    def __init__(self):
+    def __init__(self, tokenize_pretokenized=False):
         stanza.download('en')
-        self.tagger = stanza.Pipeline('en')
+        self.tagger = stanza.Pipeline('en', tokenize_pretokenized=tokenize_pretokenized)
 
     # story - text (whole story) (string)
     # use_cr - use coreference resolution (boolean)

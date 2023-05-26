@@ -44,25 +44,7 @@ def perform_sentiment(df):
 
     return sentiment.sort_values("sentence_sentiment")
 
-def calculate_align_rate(sentence_list):
-    '''
-    Function to calculate the align_rate of the whole novel
-    '''
-    sentiment_score = []
-    for sentence in sentence_list:
-        doc = stanza.tagger(sentence)
-        for doc_sentence in doc.sentences:
-            sentiment_score.append(float(doc_sentence.sentiment))
-
-    l = len(np.nonzero(sentiment_score)[0])
-    if l == 0:
-        l = 1
-    
-    align_rate = np.sum(sentiment_score) / l * -2
-
-    return align_rate
-
-def calculate_matrix(name_list, sentences, cor_res_sentences, align_rate):
+def calculate_matrix(name_list, sentences, cor_res_sentences):
     '''
     Function to calculate the co-occurrence matrix and sentiment matrix among all the top characters
     :param name_list: the list of names of the top characters in the novel.
@@ -74,10 +56,16 @@ def calculate_matrix(name_list, sentences, cor_res_sentences, align_rate):
 
     # calculate a sentiment score for each sentence in the novel
     sentiment_score = []
-    for sentence in sentences:
-        doc = stanza.tagger(sentence)
-        for doc_sentence in doc.sentences:
-            sentiment_score.append(float(doc_sentence.sentiment) - 1)
+    # for sentence in sentences:
+    doc = stanza_pretokenized.tagger(sentences)
+    for doc_sentence in doc.sentences:
+        sentiment_score.append(float(doc_sentence.sentiment) - 1)
+
+    l = len(np.nonzero(sentiment_score)[0])
+    if l == 0:
+        l = 1
+    
+    align_rate = np.sum(sentiment_score) / l * -2
 
     # replace name occurrences with names that can be vectorized
     for i in range(len(cor_res_sentences)):
@@ -100,11 +88,9 @@ def calculate_matrix(name_list, sentences, cor_res_sentences, align_rate):
     else:
         occurrence_each_sentence = name_vec.fit_transform(cor_res_sentences).toarray()
 
-    shape1 = occurrence_each_sentence.shape[0]
-    sentiment_score = sentiment_score[0:shape1]
-
     co_occurrence_matrix = np.dot(occurrence_each_sentence.T, occurrence_each_sentence)
-    sentiment_matrix = np.dot(occurrence_each_sentence.T, (occurrence_each_sentence.T * sentiment_score).T) + align_rate * co_occurrence_matrix
+    sentiment_matrix = np.dot(occurrence_each_sentence.T, (occurrence_each_sentence.T * sentiment_score).T)
+    sentiment_matrix += align_rate * co_occurrence_matrix
     co_occurrence_matrix = np.tril(co_occurrence_matrix)
     sentiment_matrix = np.tril(sentiment_matrix)
 
@@ -132,17 +118,17 @@ def generate_json(f_name, name_list, sentiment_matrix):
 
 if __name__ == "__main__":
     stanza = ns.StanzaNer()
+    stanza_pretokenized = ns.StanzaNer(tokenize_pretokenized=True)
     for fn in os.listdir("../data/stories"):
-        if not fn.startswith("0"):
+        if not fn.startswith("0") and not fn.startswith("split"):
             f = fn.split(".")[0]
-
+            
             print(f"Running for {f}")
             story = read_story_from_file(file_name=f)
             doc, cr_story = stanza.ner_stanza_whole_doc(story, use_cr=True)
-            
+
             sentences = sent_tokenize(story)
             cr_sentences = sent_tokenize(cr_story)
-            align_rate = calculate_align_rate(sentences)
             
             person_entities = [x.text.lower().replace("'s", "") for x in get_person_entities(doc)]
             person_entities = [x.split(' ') for x in person_entities]
@@ -152,7 +138,7 @@ if __name__ == "__main__":
             person_entities = [x for x in counts]
             counts = [counts[x] for x in counts]
             
-            cooccurrence_matrix, sentiment_matrix = calculate_matrix(person_entities, sentences, cr_sentences, align_rate)
+            cooccurrence_matrix, sentiment_matrix = calculate_matrix(person_entities, sentences, cr_sentences)
             person_entities = [name.replace("_", " ") for name in person_entities]
 
             generate_json(f, person_entities, sentiment_matrix)
