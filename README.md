@@ -7,6 +7,9 @@ Team members:
  
 Group public acronym/name: `skupina123`
 
+# Link to shared data in oneDrive
+https://unilj-my.sharepoint.com/personal/slavkozitnik_fri1_uni-lj_si/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Fslavkozitnik%5Ffri1%5Funi%2Dlj%5Fsi%2FDocuments%2FFRI%2FNLP%5FCourse%5F2023%2FProjects%20data%20to%20share%2FSkupina123
+
 # Instructions for usage  
 Instructions for installation:
 `pip install allennlp allennlp-models stanza spacy numpy pandas afinn nltk scikit-learn Levenshtein networkx`
